@@ -16,3 +16,6 @@
 
 # Core dumps
 core
+
+#Specific files
+Grace_kid.c
