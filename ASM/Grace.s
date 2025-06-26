@@ -4,8 +4,10 @@ extern fflush
 exit_func:
 	mov rax, 60
 	syscall
+error_exit:
+	mov rdi, 1
+	jmp exit_func
 _start:
-	and rsp, -16
 	mov rax, 2
 	mov rdi, file_str
 	mov rsi, 577
@@ -20,22 +22,21 @@ _start:
 	movzx rcx, byte [tab]
 	movzx r8, byte [quote]
 	movzx r9, byte [sc]
-	sub rsp, 8
 	push format_str
 	mov rax, 0
+	sub rsp, 16
 	call dprintf
 	add rsp, 16
 	mov rdi, 0
 	xor rax, rax
+	sub rsp, 16
 	call fflush
+	add rsp, 16
 	mov rax, 3
 	mov rdi, rbx
 	syscall
 	mov rdi, 0
-	call exit_func
-error_exit:
-	mov rdi, 1
-	call exit_func
+	jmp exit_func
 %endmacro
 ; cmt1
 section .data

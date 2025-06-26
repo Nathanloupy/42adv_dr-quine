@@ -3,8 +3,8 @@
 ASM = nasm
 LD = ld
 
-ASMFLAGS = -f elf64
-LDFLAGS = -lc -dynamic-linker /lib64/ld-linux-x86-64.so.2
+ASMFLAGS = -f elf64 -g
+LDFLAGS = -lc -dynamic-linker /lib64/ld-linux-x86-64.so.2 -g
 
 COLLEEN_NAME = Colleen
 GRACE_NAME = Grace
