@@ -14,7 +14,7 @@ COLLEEN_FILE = Colleen.s
 GRACE_FILE = Grace.s
 GRACE_KID_FILE = Grace_kid.s
 SULLY_FILE = Sully.s
-SULLY_KID_FILES = Sully_*.s
+SULLY_KID_FILES = Sully_*
 
 COLLEEN_OBJ = $(COLLEEN_FILE:.s=.o)
 GRACE_OBJ = $(GRACE_FILE:.s=.o)
