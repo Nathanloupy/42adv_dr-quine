@@ -1,4 +1,4 @@
-# Dr. Quine
+# dr-quine
 
 This project serves as an introduction to quines - self-replicating programs implemented in C/Assembly/Python. The project is split into three parts, each with additional requirements beyond its main goal.
 
